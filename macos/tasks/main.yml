@@ -1,5 +1,9 @@
 ---
 # tasks file for macos
 
-- debug:
-    msg: hello world
+- osx_defaults:
+    state: present
+    domain: com.microsoft.VSCode
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: false
