@@ -1,0 +1,8 @@
+---
+
+- osx_defaults:
+    state: present
+    domain: com.microsoft.VSCode
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: false

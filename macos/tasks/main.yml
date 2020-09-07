@@ -1,9 +1,10 @@
 ---
 # tasks file for macos
 
-- osx_defaults:
-    state: present
-    domain: com.microsoft.VSCode
-    key: ApplePressAndHoldEnabled
-    type: bool
-    value: false
+- name: include tasks/defaults.yml
+  include_tasks:
+    file: defaults.yml
+
+- name: include tasks/homebrew.yml
+  include_tasks:
+    file: homebrew.yml
