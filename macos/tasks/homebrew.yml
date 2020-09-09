@@ -26,6 +26,7 @@
       - docbook-xsl
       - docker-machine
       - docker-machine-driver-xhyve
+      - doctl
       - fd
       - fluxctl
       - fontconfig
