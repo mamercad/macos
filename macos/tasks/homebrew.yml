@@ -54,6 +54,7 @@
       - helm
       - htop
       - httpie
+      - hub
       - hyperkit
       - icu4c
       - ilmbase
