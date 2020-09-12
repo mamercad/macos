@@ -1,8 +1,163 @@
 ---
 
-- osx_defaults:
+- name: Set default mode to plain text for TextEdit
+  osx_defaults:
+    domain: com.apple.TextEdit
+    key: RichText
+    type: int
+    value: 0
     state: present
+  tags: macos
+
+- name: Fix vs code vim repeat
+  osx_defaults:
     domain: com.microsoft.VSCode
     key: ApplePressAndHoldEnabled
     type: bool
     value: false
+    state: present
+  tags: macos
+
+- name: Autohide the Dock
+  osx_defaults:
+    domain: com.apple.dock
+    key: autohide
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Disable Dock icon bounce
+  osx_defaults:
+    domain: com.apple.dock
+    key: no-bouncing
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Show external media on the desktop
+  osx_defaults:
+    domain: com.apple.finder
+    key: ShowExternalHardDrivesOnDesktop
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Show internal media on the desktop
+  osx_defaults:
+    domain: com.apple.finder
+    key: ShowHardDrivesOnDesktop
+    type: bool
+    value: false
+    state: present
+  tags: macos
+
+- name: Show removable media on the desktop
+  osx_defaults:
+    domain: com.apple.finder
+    key: Showremovablemediaondesktop
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Show network media on the desktop
+  osx_defaults:
+    domain: com.apple.finder
+    key: ShowMountedServersOnDesktop
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Show full path in Finder
+  osx_defaults:
+    domain: com.apple.finder
+    key: _FXShowPosixPathInTitle
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Show path in Finder
+  osx_defaults:
+    domain: com.apple.finder
+    key: ShowPathbar
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Show status bar in Finder
+  osx_defaults:
+    domain: com.apple.finder
+    key: ShowStatusBar
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Turn off auto-correct
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: NSAutomaticSpellingCorrectionEnabled
+    type: bool
+    value: false
+    state: present
+  tags: macos
+
+- name: Enable full keyboard access (all controls)
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: AppleKeyboardUIMode
+    type: int
+    value: 3
+    state: present
+  tags: macos
+
+- name: Enable key repeat
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: ApplePressAndHoldEnabled
+    type: bool
+    value: true
+    state: present
+  tags: macos
+
+- name: Set key repeat rate
+  osx_defaults:
+    domain: NSGlobalDomain
+    key: KeyRepeat
+    type: int
+    value: 2
+    state: present
+  tags: macos
+
+- name: Screensaver immediate lock
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPasswordDelay
+    type: int
+    value: 1
+    state: present
+  tags: macos
+
+- name: Screensaver ask for password
+  osx_defaults:
+    domain: com.apple.screensaver
+    key: askForPasswordDelay
+    type: int
+    value: 1
+    state: present
+  tags: macos
+
+- name: Enable AirDrop
+  osx_defaults:
+    domain: com.apple.NetworkBrowser
+    key: BrowseAllInterfaces
+    type: bool
+    value: true
+    state: present
+  tags: macos
