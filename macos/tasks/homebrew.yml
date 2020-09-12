@@ -45,6 +45,7 @@
       - gnu-getopt
       - gnupg
       - gnutls
+      - go
       - gobject-introspection
       - googler
       - gpgme
