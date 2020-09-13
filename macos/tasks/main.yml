@@ -4,7 +4,9 @@
 - name: include tasks/defaults.yml
   include_tasks:
     file: defaults.yml
+  when: ansible_distribution == 'MacOSX'
 
 - name: include tasks/homebrew.yml
   include_tasks:
     file: homebrew.yml
+  when: ansible_distribution == 'MacOSX'
